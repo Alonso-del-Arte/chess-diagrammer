@@ -1,0 +1,15 @@
+/*
+ * Stylesheet for the chess diagrams. Styles for anything else should go in main.css
+ */
+table.board { border-collapse: collapse }
+table.board td { width: 1.25em; height: 1.25em; font-size: 36pt; text-align: center }
+td.a1, td.a3, td.a5, td.a7, td.b2, td.b4, td.b6, td.b8, 
+td.c1, td.c3, td.c5, td.c7, td.d2, td.d4, td.d6, td.d8, 
+td.e1, td.e3, td.e5, td.e7, td.f2, td.f4, td.f6, td.f8, 
+td.g1, td.g3, td.g5, td.g7, td.h2, td.h4, td.h6, td.h8 { background-color: #208020 }
+td.a2, td.a4, td.a6, td.a8, td.b1, td.b3, td.b5, td.b7,  
+td.c2, td.c4, td.c6, td.c8, td.d1, td.d3, td.d5, td.d7, 
+td.e2, td.e4, td.e6, td.e8, td.f1, td.f3, td.f5, td.f7, 
+td.g2, td.g4, td.g6, td.g8, td.h1, td.h3, td.h5, td.h7 { background-color: #80ff80 }
+span.white { text-shadow: 0px 0px 5px white }
+span.black { text-shadow: 0px 0px 5px black }

@@ -7,9 +7,424 @@
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="description" content="Demonstration of a chess diagrammer tool" />
         <meta name="author" content="Alonso del Arte" />
+        <link rel="stylesheet" href="css/main.css" type="text/css" />
+        <link rel="stylesheet" href="css/diagrams.css" type="text/css" />
     </head>
     <body>
         <h1>Chess Diagrammer Demo</h1>
         <p>Filler text. Filler text. Filler text. Filler text. Filler text. Filler text. Filler text. Filler text. Filler text. Filler text. Filler text. Filler text. Filler text. Filler text. Filler text. Filler text. Filler text.</p>
+        <h2>Empty Board</h2>
+        <p>You could take the source for the table of the empty board and place the piece characters as needed. At least that's what I'll be doing before I work out the JavaScript.</p>
+        <table id="Example0000White" class="board">
+            <tr>
+                <th>8</th>
+                <td class="a8">&nbsp;</td>
+                <td class="b8">&nbsp;</td>
+                <td class="c8">&nbsp;</td>
+                <td class="d8">&nbsp;</td>
+                <td class="e8">&nbsp;</td>
+                <td class="f8">&nbsp;</td>
+                <td class="g8">&nbsp;</td>
+                <td class="h8">&nbsp;</td>
+            </tr>
+            <tr>
+                <th>7</th>
+                <td class="a7">&nbsp;</td>
+                <td class="b7">&nbsp;</td>
+                <td class="c7">&nbsp;</td>
+                <td class="d7">&nbsp;</td>
+                <td class="e7">&nbsp;</td>
+                <td class="f7">&nbsp;</td>
+                <td class="g7">&nbsp;</td>
+                <td class="h7">&nbsp;</td>
+            </tr>
+            <tr>
+                <th>6</th>
+                <td class="a6">&nbsp;</td>
+                <td class="b6">&nbsp;</td>
+                <td class="c6">&nbsp;</td>
+                <td class="d6">&nbsp;</td>
+                <td class="e6">&nbsp;</td>
+                <td class="f6">&nbsp;</td>
+                <td class="g6">&nbsp;</td>
+                <td class="h6">&nbsp;</td>
+            </tr>
+            <tr>
+                <th>5</th>
+                <td class="a5">&nbsp;</td>
+                <td class="b5">&nbsp;</td>
+                <td class="c5">&nbsp;</td>
+                <td class="d5">&nbsp;</td>
+                <td class="e5">&nbsp;</td>
+                <td class="f5">&nbsp;</td>
+                <td class="g5">&nbsp;</td>
+                <td class="h5">&nbsp;</td>
+            </tr>
+            <tr>
+                <th>4</th>
+                <td class="a4">&nbsp;</td>
+                <td class="b4">&nbsp;</td>
+                <td class="c4">&nbsp;</td>
+                <td class="d4">&nbsp;</td>
+                <td class="e4">&nbsp;</td>
+                <td class="f4">&nbsp;</td>
+                <td class="g4">&nbsp;</td>
+                <td class="h4">&nbsp;</td>
+            </tr>
+            <tr>
+                <th>3</th>
+                <td class="a3">&nbsp;</td>
+                <td class="b3">&nbsp;</td>
+                <td class="c3">&nbsp;</td>
+                <td class="d3">&nbsp;</td>
+                <td class="e3">&nbsp;</td>
+                <td class="f3">&nbsp;</td>
+                <td class="g3">&nbsp;</td>
+                <td class="h3">&nbsp;</td>
+            </tr>
+            <tr>
+                <th>2</th>
+                <td class="a2">&nbsp;</td>
+                <td class="b2">&nbsp;</td>
+                <td class="c2">&nbsp;</td>
+                <td class="d2">&nbsp;</td>
+                <td class="e2">&nbsp;</td>
+                <td class="f2">&nbsp;</td>
+                <td class="g2">&nbsp;</td>
+                <td class="h2">&nbsp;</td>
+            </tr>
+            <tr>
+                <th>1</th>
+                <td class="a1">&nbsp;</td>
+                <td class="b1">&nbsp;</td>
+                <td class="c1">&nbsp;</td>
+                <td class="d1">&nbsp;</td>
+                <td class="e1">&nbsp;</td>
+                <td class="f1">&nbsp;</td>
+                <td class="g1">&nbsp;</td>
+                <td class="h1">&nbsp;</td>
+            </tr>
+            <tr>
+                <td></td>
+                <th>a</th>
+                <th>b</th>
+                <th>c</th>
+                <th>d</th>
+                <th>e</th>
+                <th>f</th>
+                <th>g</th>
+                <th>h</th>
+            </tr>
+        </table>
+        <p>That's from White's perspective. From Black's perspective, the empty board goes like this:</p>
+        <table id="Example0000Black" class="board">
+            <tr>
+                <th>1</th>
+                <td class="h1">&nbsp;</td>
+                <td class="g1">&nbsp;</td>
+                <td class="f1">&nbsp;</td>
+                <td class="e1">&nbsp;</td>
+                <td class="d1">&nbsp;</td>
+                <td class="c1">&nbsp;</td>
+                <td class="b1">&nbsp;</td>
+                <td class="a1">&nbsp;</td>
+            </tr>
+            <tr>
+                <th>2</th>
+                <td class="h2">&nbsp;</td>
+                <td class="g2">&nbsp;</td>
+                <td class="f2">&nbsp;</td>
+                <td class="e2">&nbsp;</td>
+                <td class="d2">&nbsp;</td>
+                <td class="c2">&nbsp;</td>
+                <td class="b2">&nbsp;</td>
+                <td class="a2">&nbsp;</td>
+            </tr>
+            <tr>
+                <th>3</th>
+                <td class="h3">&nbsp;</td>
+                <td class="g3">&nbsp;</td>
+                <td class="f3">&nbsp;</td>
+                <td class="e3">&nbsp;</td>
+                <td class="d3">&nbsp;</td>
+                <td class="c3">&nbsp;</td>
+                <td class="b3">&nbsp;</td>
+                <td class="a3">&nbsp;</td>
+            </tr>
+            <tr>
+                <th>4</th>
+                <td class="h4">&nbsp;</td>
+                <td class="g4">&nbsp;</td>
+                <td class="f4">&nbsp;</td>
+                <td class="e4">&nbsp;</td>
+                <td class="d4">&nbsp;</td>
+                <td class="c4">&nbsp;</td>
+                <td class="b4">&nbsp;</td>
+                <td class="a4">&nbsp;</td>
+            </tr>
+            <tr>
+                <th>5</th>
+                <td class="h5">&nbsp;</td>
+                <td class="g5">&nbsp;</td>
+                <td class="f5">&nbsp;</td>
+                <td class="e5">&nbsp;</td>
+                <td class="d5">&nbsp;</td>
+                <td class="c5">&nbsp;</td>
+                <td class="b5">&nbsp;</td>
+                <td class="a5">&nbsp;</td>
+            </tr>
+            <tr>
+                <th>6</th>
+                <td class="h6">&nbsp;</td>
+                <td class="g6">&nbsp;</td>
+                <td class="f6">&nbsp;</td>
+                <td class="e6">&nbsp;</td>
+                <td class="d6">&nbsp;</td>
+                <td class="c6">&nbsp;</td>
+                <td class="b6">&nbsp;</td>
+                <td class="a6">&nbsp;</td>
+            </tr>
+            <tr>
+                <th>7</th>
+                <td class="h7">&nbsp;</td>
+                <td class="g7">&nbsp;</td>
+                <td class="f7">&nbsp;</td>
+                <td class="e7">&nbsp;</td>
+                <td class="d7">&nbsp;</td>
+                <td class="c7">&nbsp;</td>
+                <td class="b7">&nbsp;</td>
+                <td class="a7">&nbsp;</td>
+            </tr>
+            <tr>
+                <th>8</th>
+                <td class="h8">&nbsp;</td>
+                <td class="g8">&nbsp;</td>
+                <td class="f8">&nbsp;</td>
+                <td class="e8">&nbsp;</td>
+                <td class="d8">&nbsp;</td>
+                <td class="c8">&nbsp;</td>
+                <td class="b8">&nbsp;</td>
+                <td class="a8">&nbsp;</td>
+            </tr>
+            <tr>
+                <td></td>
+                <th>h</th>
+                <th>g</th>
+                <th>f</th>
+                <th>e</th>
+                <th>d</th>
+                <th>c</th>
+                <th>b</th>
+                <th>a</th>
+            </tr>
+        </table>
+        <h2>Initial Game State</h2>
+        <p>Remember: White's queenside rook goes on a "black" square, and Black's queen is on the same file (d) as White's queen. At least for me, that's enough information for me to remember how to correctly place all the pieces.</p>
+        <table id="Example0001White" class="board">
+            <tr>
+                <th>8</th>
+                <td class="a8"><span class="black">&#x265C;</span></td>
+                <td class="b8"><span class="black">&#x265E;</span></td>
+                <td class="c8"><span class="black">&#x265D;</span></td>
+                <td class="d8"><span class="black">&#x265B;</span></td>
+                <td class="e8"><span class="black">&#x265A;</span></td>
+                <td class="f8"><span class="black">&#x265D;</span></td>
+                <td class="g8"><span class="black">&#x265E;</span></td>
+                <td class="h8"><span class="black">&#x265C;</span></td>
+            </tr>
+            <tr>
+                <th>7</th>
+                <td class="a7"><span class="black">&#x265F;</span></td>
+                <td class="b7"><span class="black">&#x265F;</span></td>
+                <td class="c7"><span class="black">&#x265F;</span></td>
+                <td class="d7"><span class="black">&#x265F;</span></td>
+                <td class="e7"><span class="black">&#x265F;</span></td>
+                <td class="f7"><span class="black">&#x265F;</span></td>
+                <td class="g7"><span class="black">&#x265F;</span></td>
+                <td class="h7"><span class="black">&#x265F;</span></td>
+            </tr>
+            <tr>
+                <th>6</th>
+                <td class="a6">&nbsp;</td>
+                <td class="b6">&nbsp;</td>
+                <td class="c6">&nbsp;</td>
+                <td class="d6">&nbsp;</td>
+                <td class="e6">&nbsp;</td>
+                <td class="f6">&nbsp;</td>
+                <td class="g6">&nbsp;</td>
+                <td class="h6">&nbsp;</td>
+            </tr>
+            <tr>
+                <th>5</th>
+                <td class="a5">&nbsp;</td>
+                <td class="b5">&nbsp;</td>
+                <td class="c5">&nbsp;</td>
+                <td class="d5">&nbsp;</td>
+                <td class="e5">&nbsp;</td>
+                <td class="f5">&nbsp;</td>
+                <td class="g5">&nbsp;</td>
+                <td class="h5">&nbsp;</td>
+            </tr>
+            <tr>
+                <th>4</th>
+                <td class="a4">&nbsp;</td>
+                <td class="b4">&nbsp;</td>
+                <td class="c4">&nbsp;</td>
+                <td class="d4">&nbsp;</td>
+                <td class="e4">&nbsp;</td>
+                <td class="f4">&nbsp;</td>
+                <td class="g4">&nbsp;</td>
+                <td class="h4">&nbsp;</td>
+            </tr>
+            <tr>
+                <th>3</th>
+                <td class="a3">&nbsp;</td>
+                <td class="b3">&nbsp;</td>
+                <td class="c3">&nbsp;</td>
+                <td class="d3">&nbsp;</td>
+                <td class="e3">&nbsp;</td>
+                <td class="f3">&nbsp;</td>
+                <td class="g3">&nbsp;</td>
+                <td class="h3">&nbsp;</td>
+            </tr>
+            <tr>
+                <th>2</th>
+                <td class="a2"><span class="white">&#x2659;</span></td>
+                <td class="b2"><span class="white">&#x2659;</span></td>
+                <td class="c2"><span class="white">&#x2659;</span></td>
+                <td class="d2"><span class="white">&#x2659;</span></td>
+                <td class="e2"><span class="white">&#x2659;</span></td>
+                <td class="f2"><span class="white">&#x2659;</span></td>
+                <td class="g2"><span class="white">&#x2659;</span></td>
+                <td class="h2"><span class="white">&#x2659;</span></td>
+            </tr>
+            <tr>
+                <th>1</th>
+                <td class="a1"><span class="white">&#x2656;</span></td>
+                <td class="b1"><span class="white">&#x2658;</span></td>
+                <td class="c1"><span class="white">&#x2657;</span></td>
+                <td class="d1"><span class="white">&#x2655;</span></td>
+                <td class="e1"><span class="white">&#x2654;</span></td>
+                <td class="f1"><span class="white">&#x2657;</span></td>
+                <td class="g1"><span class="white">&#x2658;</span></td>
+                <td class="h1"><span class="white">&#x2656;</span></td>
+            </tr>
+            <tr>
+                <td></td>
+                <th>a</th>
+                <th>b</th>
+                <th>c</th>
+                <th>d</th>
+                <th>e</th>
+                <th>f</th>
+                <th>g</th>
+                <th>h</th>
+            </tr>
+        </table>
+        <!-- p>That's from White's perspective. From Black's perspective, the empty board goes like this:</p>
+        <table id="Example0001Black" class="board">
+            <tr>
+                <th>1</th>
+                <td class="h1">&nbsp;</td>
+                <td class="g1">&nbsp;</td>
+                <td class="f1">&nbsp;</td>
+                <td class="e1">&nbsp;</td>
+                <td class="d1">&nbsp;</td>
+                <td class="c1">&nbsp;</td>
+                <td class="b1">&nbsp;</td>
+                <td class="a1">&nbsp;</td>
+            </tr>
+            <tr>
+                <th>2</th>
+                <td class="h2">&nbsp;</td>
+                <td class="g2">&nbsp;</td>
+                <td class="f2">&nbsp;</td>
+                <td class="e2">&nbsp;</td>
+                <td class="d2">&nbsp;</td>
+                <td class="c2">&nbsp;</td>
+                <td class="b2">&nbsp;</td>
+                <td class="a2">&nbsp;</td>
+            </tr>
+            <tr>
+                <th>3</th>
+                <td class="h3">&nbsp;</td>
+                <td class="g3">&nbsp;</td>
+                <td class="f3">&nbsp;</td>
+                <td class="e3">&nbsp;</td>
+                <td class="d3">&nbsp;</td>
+                <td class="c3">&nbsp;</td>
+                <td class="b3">&nbsp;</td>
+                <td class="a3">&nbsp;</td>
+            </tr>
+            <tr>
+                <th>4</th>
+                <td class="h4">&nbsp;</td>
+                <td class="g4">&nbsp;</td>
+                <td class="f4">&nbsp;</td>
+                <td class="e4">&nbsp;</td>
+                <td class="d4">&nbsp;</td>
+                <td class="c4">&nbsp;</td>
+                <td class="b4">&nbsp;</td>
+                <td class="a4">&nbsp;</td>
+            </tr>
+            <tr>
+                <th>5</th>
+                <td class="h5">&nbsp;</td>
+                <td class="g5">&nbsp;</td>
+                <td class="f5">&nbsp;</td>
+                <td class="e5">&nbsp;</td>
+                <td class="d5">&nbsp;</td>
+                <td class="c5">&nbsp;</td>
+                <td class="b5">&nbsp;</td>
+                <td class="a5">&nbsp;</td>
+            </tr>
+            <tr>
+                <th>6</th>
+                <td class="h6">&nbsp;</td>
+                <td class="g6">&nbsp;</td>
+                <td class="f6">&nbsp;</td>
+                <td class="e6">&nbsp;</td>
+                <td class="d6">&nbsp;</td>
+                <td class="c6">&nbsp;</td>
+                <td class="b6">&nbsp;</td>
+                <td class="a6">&nbsp;</td>
+            </tr>
+            <tr>
+                <th>7</th>
+                <td class="h7">&nbsp;</td>
+                <td class="g7">&nbsp;</td>
+                <td class="f7">&nbsp;</td>
+                <td class="e7">&nbsp;</td>
+                <td class="d7">&nbsp;</td>
+                <td class="c7">&nbsp;</td>
+                <td class="b7">&nbsp;</td>
+                <td class="a7">&nbsp;</td>
+            </tr>
+            <tr>
+                <th>8</th>
+                <td class="h8">&nbsp;</td>
+                <td class="g8">&nbsp;</td>
+                <td class="f8">&nbsp;</td>
+                <td class="e8">&nbsp;</td>
+                <td class="d8">&nbsp;</td>
+                <td class="c8">&nbsp;</td>
+                <td class="b8">&nbsp;</td>
+                <td class="a8">&nbsp;</td>
+            </tr>
+            <tr>
+                <td></td>
+                <th>h</th>
+                <th>g</th>
+                <th>f</th>
+                <th>e</th>
+                <th>d</th>
+                <th>c</th>
+                <th>b</th>
+                <th>a</th>
+            </tr>
+        </table -->
+        <p>There's currently the problem that only black pawns have the emoji variation selector recognized. With that selector, the pieces would look fuller: compare how the Black pawn "&#x265F;" looks without the selector to how it looks with the selector: "&#x265F;&#xFE0F;".</p>
+        <p>A proposal to Unicode is under consideration, but even without the coronavirus pandemic there's no telling how soon the proposal will be accepted or rejected.</p>
+        <p>And regardless of that, I can't remember all these Unicode character code points. It would be nice if could just write something like "wQ" or "bR" and JavaScript took care of converting that to the appropriate Unicode character sequence. [FINISH WRITING]</p>
     </body>
 </html>

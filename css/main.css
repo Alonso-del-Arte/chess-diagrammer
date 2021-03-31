@@ -1,1 +1,4 @@
-// placeholder for css
+/*
+ * Primary stylesheet. Styles for chess diagrams should go in diagrams.css
+ */
+p { font-family: Georgia, serif; font-size: 14pt }
