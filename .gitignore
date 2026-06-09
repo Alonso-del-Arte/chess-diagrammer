@@ -1,5 +1,9 @@
+# Vim
+*.swp
+
 # For drafts
 draft/
 
-# Just in case we need to put in any API keys or other credentials, but I doubt it
+# Just in case we need to put in any API keys or other credentials, but I doubt 
+# it
 secrets/
